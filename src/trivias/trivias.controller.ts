@@ -8,9 +8,11 @@ import {
   Put,
   ParseIntPipe,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { TriviasService } from './trivias.service';
 import { CreateTriviaDto, UpdateTriviaDto } from './trivias.dto';
 
+@ApiTags('trivias')
 @Controller('trivias')
 export class TriviasController {
   constructor(private triviasService: TriviasService) {}
